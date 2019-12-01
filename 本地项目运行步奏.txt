@@ -1,0 +1,4 @@
+1. 启动Apache 2.4
+2. 启动mysql服务
+3. 浏览器输入 http://baixiu-dev.io/admin/login.php 进入登录页面 （默认先登录才能操作）
+4. 邮箱 1@1.a 密码 1

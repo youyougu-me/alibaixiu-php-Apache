@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改系统自带组件</title>
+</head>
+<style>
+.checkbox1{
+	display: none;
+}
+
+/*+选择这个选择器相邻的后面一个i*/
+.checkbox1+i{
+	display: inline-block;
+	font-style:normal;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #c0c0c0;
+}
+
+.checkbox1:checked + i{
+	background-color: pink;
+}
+
+.checkbox1:checked+i::after{
+	content: '';
+	display: inline-block;
+	margin: 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #c0c0c0;
+
+
+
+}
+
+
+
+
+</style>
+<body>
+
+<!-- label标签,点i就相当于点了这个input -->
+<label >
+<input type="checkbox" class="checkbox1">
+<i></i>
+	
+</label>
+
+	
+</body>
+</html>

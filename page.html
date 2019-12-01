@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/assets/vendors/bootstrap/css/bootstrap.css">
+</head>
+<body>
+<!-- 这是jQuery的插件，肯定得引入jQuery -->
+<script src="/static/assets/vendors/jquery/jquery.js"></script>
+<script src="/static/assets/vendors/twbs-pagination/jquery.twbsPagination.js"></script>
+
+ <ul id="pagination-demo" class="pagination-sm"></ul>
+
+ <script>
+ 
+ 	function pagination(totalPages){
+
+        //在下一次页码插件开始之前，把上一次的毁掉
+        $('#pagination-demo').twbsPagination('destroy')
+ 		$('#pagination-demo').twbsPagination({  //页码插件开始
+        totalPages: totalPages,
+        visiblePages: 7,
+        onPageClick: function (event, page) {
+            $('#page-content').text('Page ' + page);
+        }
+    });  //页码插件结束
+
+
+
+ }//函数完
+ // pagination(30)
+
+//我先创建一次，让下次调用有值得被destroy的东西
+ $('#pagination-demo').twbsPagination({  //页码插件开始
+        totalPages: 5,
+        visiblePages: 7,
+        onPageClick: function (event, page) {
+            $('#page-content').text('Page ' + page);
+        }
+    });  //页码插件结束
+
+
+ </script>
+	
+</body>
+</html>
